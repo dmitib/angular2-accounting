@@ -6,7 +6,10 @@
   {{ message.text }}
 </div>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div class="form-group" [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
+    <div
+      class="form-group"
+      [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}"
+    >
         <label for="email">Email</label>
         <input
             type="text"
@@ -31,7 +34,10 @@
             </span>
         </span>
     </div>
-    <div class="form-group" [ngClass]="{'has-error': form.get('password').invalid && form.get('password').touched}">
+    <div
+      class="form-group"
+      [ngClass]="{'has-error': form.get('password').invalid && form.get('password').touched}"
+    >
         <label for="password">Пароль</label>
         <input
             type="password"
@@ -50,7 +56,7 @@
                 Пароль не может быть пустым
             </span>
             <span
-                *ngIf="form.get('password')['errors']['minlength']"
+                *ngIf="form.get('password')['errors']['minlength'] && form.get('password')['errors']['minlength']['requiredLength']"
             >
                 Введите должен быть больше
                 {{ form.get('password')['errors']['minlength']['requiredLength'] }}
