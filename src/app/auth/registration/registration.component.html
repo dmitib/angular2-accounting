@@ -26,6 +26,11 @@
             >
                 Введите корректный Email
             </span>
+            <span
+                *ngIf="form.get('email')['errors']['forbiddenEmail']"
+            >
+                Email уже занят
+            </span>
         </span>
     </div>
     <div
