@@ -11,6 +11,12 @@
       "password": "test",
       "name": "test",
       "id": 2
+    },
+    {
+      "email": "zaza@zaza.za",
+      "password": "zazaza",
+      "name": "zaza",
+      "id": 3
     }
   ],
   "bill": {
