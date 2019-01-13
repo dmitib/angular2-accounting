@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription, combineLatest } from 'rxjs';
 
 import { BillService } from './../shared/services/bill.service';
+import { Bill } from '../shared/models/bill.model';
 
 @Component({
   selector: 'acc-bill-page',
