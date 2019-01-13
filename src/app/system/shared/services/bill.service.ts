@@ -16,7 +16,7 @@ export class BillService extends BaseApi {
     return this.get('bill');
   }
 
-  getCurrency(base: string = 'RUB'): Observable<any> {
+  getCurrency(base: string = 'EUR'): Observable<any> {
     return this.get(`currency?base=${base}`);
   }
 }

@@ -1,4 +1,4 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Directive, HostBinding, HostListener, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[accDropdown]'
@@ -7,7 +7,13 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 export class DropdownDirective {
   @HostBinding('class.open') isOpen = false;
 
-  @HostListener('click') onClick() {
-    this.isOpen = !this.isOpen;
+  @HostListener('document:click', ['$event']) clickout(event) {
+    if (this.eRef.nativeElement.contains(event.target)) {
+      this.isOpen = !this.isOpen;
+    } else {
+      this.isOpen = false;
+    }
   }
+
+  constructor(private eRef: ElementRef) {}
 }

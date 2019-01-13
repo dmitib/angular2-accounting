@@ -20,8 +20,8 @@
     }
   ],
   "bill": {
-    "value": 100000,
-    "currency": "RUB"
+    "value": 100,
+    "currency": "EUR"
   },
   "categories": [
     {
@@ -43,7 +43,7 @@
   "currency": {
     "success": true,
     "timestamp": 1547399647,
-    "base": "RUB",
+    "base": "EUR",
     "date": "2019-01-13",
     "rates": {
       "AED": 4.212874,
